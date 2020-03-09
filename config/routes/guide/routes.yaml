@@ -1,0 +1,11 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+guide_michelin_accueil:
+  path: /accueil
+  controller: App\Controller\GuideController::accueil
+
+guide_michelin_menu:
+  path: /menu
+  controller: App\Controller\GuideController::menu

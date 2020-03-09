@@ -9,5 +9,9 @@ class GuideController extends AbstractController{
         return $this->render('guide/accueil.html.twig', array('numero' => $nombre));
     }
 
+    public function menu() {
+        return $this->render('guide/menu.html.twig');
+    }
+
 }
 

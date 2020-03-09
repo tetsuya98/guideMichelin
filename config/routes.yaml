@@ -2,6 +2,6 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-guide_michelin_accueil:
-  path: /accueil
-  controller: App\Controller\GuideController::accueil
+salle_tp :
+  resource: routes/guide/routes.yaml
+  prefix: /guideMichelin
