@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+<ul>
+    {% for resto in restos %}
+    <li><a href="{{ path('guide_michelin_voir', { 'id': resto.id }) }}">{{ resto.nom }}</a></li>
+    {% endfor %}
+</ul>
+<p><a href="{{ path('guide_michelin_menu') }}">Retour</a></p>
+</body>
+</html>

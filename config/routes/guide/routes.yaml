@@ -9,3 +9,11 @@ guide_michelin_accueil:
 guide_michelin_menu:
   path: /menu
   controller: App\Controller\GuideController::menu
+
+guide_michelin_voir:
+  path: /resto/voir/{id}
+  controller: App\Controller\GuideController::voir
+
+guide_michelin_restos:
+  path: /menu/restos
+  controller: App\Controller\GuideController::restos
