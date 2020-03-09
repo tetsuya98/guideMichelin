@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Menu</title>
-</head>
-<body>
-<ul>
-    {% for resto in restos %}
-    <li><a href="{{ path('guide_michelin_voir', { 'id': resto.id }) }}">{{ resto.nom }}</a></li>
-    {% endfor %}
-</ul>
-<p><a href="{{ path('guide_michelin_menu') }}">Retour</a></p>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Restaurants
+{% endblock %}
+
+{% block body %}
+<div class="text-center">
+    <h1>Restaurants</h1>
+    <ul class="list-group">
+        {% for resto in restos %}
+            <a class="btn btn-primary btn-lg btn-block" href="{{ path('guide_michelin_voir', { 'id': resto.id }) }}" role="button">{{ resto.nom }}</a>
+        {% endfor %}
+        <a class="btn btn-secondary btn-lg btn-block" href="{{ path('guide_michelin_menu') }}" role="button">Retour</a>
+    </ul>
+</div>
+{% endblock %}
+
+
+
+
+
+

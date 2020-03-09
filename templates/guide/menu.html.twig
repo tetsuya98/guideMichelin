@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Menu</title>
-</head>
-<body>
-<h1>Menu</h1>
-<p>
-    <ul>
-        <li><a href="{{ path('guide_michelin_restos') }}">Restaurants</a></li>
-        <li>Chefs</li>
-        <li>Plets</li>
-    </ul>
-</p>
-<p>lien vers <a href="{{ path('guide_michelin_accueil') }}">Accueil</a></p>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Menu
+{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        <h1>Menu</h1>
+        <ul class="list-group">
+            <a class="btn btn-primary btn-lg btn-block" href="{{ path('guide_michelin_restos') }}" role="button">Restaurants</a>
+            <a class="btn btn-primary btn-lg btn-block" href="" role="button">Chefs</a>
+            <a class="btn btn-primary btn-lg btn-block" href="" role="button">Plats</a>
+            <a class="btn btn-secondary btn-lg btn-block" href="{{ path('guide_michelin_accueil') }}" role="button">Retour</a>
+        </ul>
+    </div>
+{% endblock %}
+
+

@@ -28,5 +28,21 @@ class GuideController extends AbstractController{
             array('restos' => $restos));
     }
 
+    public function nouveau() {
+        return $this->render('guide/ajouter.html.twig');
+    }
+
+    public function ajouter($nom, $chef, $etoile) {
+        $entityManager = $this->getDoctrine()->getManager();
+        $resto = new Resto;
+        $resto->setNom($nom);
+        $resto->setChef($chef);
+        $resto->setEtoile($etoile);
+        $entityManager->persist($resto);
+        $entityManager->flush();
+        return $this->redirectToRoute('guide_michelin_voir',
+            array('id' => $resto->getId()));
+    }
+
 }
 

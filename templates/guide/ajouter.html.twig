@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Nouveau
+{% endblock %}
+
+{% block body %}
+<div class="text-center">
+    <h1>Nouveau Restaurant</h1>
+    <form>
+        <div class="form-group">
+            <label>Nom</label>
+            <input id="nom" class="form-control form-control-lg" type="text" placeholder="Nom">
+        </div>
+        <div class="form-group">
+            <label>Chef</label>
+            <input id="chef" class="form-control form-control-lg" type="text" placeholder="Chef">
+        </div>
+        <div class="form-group">
+            <label for="etoile">Nombre d'étoiles</label>
+            <select class="form-control" id="etoile">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <a class="btn btn-primary btn-lg btn-block" href="{{ path('guide_michelin_ajouter', { 'nom':  }, { 'chef':  }, { 'etoile':  }) }}" role="button">Ajouter</a>
+    </form>
+</div>
+{% endblock %}
+

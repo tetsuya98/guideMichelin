@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guide</title>
-</head>
-<body>
-<h1>Guide Michelin</h1>
-<p>
-    ..trouver un restaurant
-</p>
-<p>lien vers <a href="{{ path('guide_michelin_menu') }}">Menu</a></p>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Michelin
+{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        <h1>Accueil</h1>
+        <ul class="list-group">
+            <a class="btn btn-primary btn-lg btn-block" href="{{ path('guide_michelin_menu') }}" role="button">Menu</a>
+            <a class="btn btn-primary btn-lg btn-block" href="{{ path('guide_michelin_restos') }}" role="button">Restaurants</a>
+        </ul>
+    </div>
+{% endblock %}
