@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\RestoRepository")
@@ -28,6 +29,7 @@ class Resto
 
     /**
      * @ORM\Column(type="smallint")
+     * @Assert\Regex(pattern="/^[0-5]$/", message="Entre 0 et 5 étoiles.")
      */
     private $etoile;
 

@@ -10,6 +10,7 @@
         <ul class="list-group">
             <li class="list-group-item">Chef : {{ resto.chef }}</li>
             <li class="list-group-item">Etoiles : {{ resto.etoile }} ☆</li>
+            <a class="btn btn-secondary btn-lg btn-block" href="{{ path('guide_michelin_modifier', { 'id': resto.id }) }}" role="button">Editer</a>
             <a class="btn btn-secondary btn-lg btn-block" href="{{ path('guide_michelin_restos') }}" role="button">Retour</a>
         </ul>
     </div>

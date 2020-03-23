@@ -18,12 +18,16 @@ guide_michelin_restos:
   path: /menu/restos
   controller: App\Controller\GuideController::restos
 
-guide_michelin_nouveau:
-  path: /ajouter
-  controller: APP\Controller\GuideController::nouveau
-
 guide_michelin_ajouter:
   path: /ajouter/{nom}/{chef}/{etoile}
   controller: App\Controller\GuideController::ajouter
   requirements:
     etoile: "1|2|3|4|5"
+
+guide_michelin_ajouter2:
+  path: /ajouter
+  controller: App\Controller\GuideController::ajouter2
+
+guide_michelin_modifier:
+  path: /edit/{id}
+  controller: App\Controller\GuideController::edit
